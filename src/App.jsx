@@ -7,7 +7,7 @@ function App() {
 
   return (
     <>
-      <header className="bg-seagull-300  w-full sticky top-0 z-[20] mx-auto flex border-b items-center lg:py-5">
+      <header className="bg-seagull-300  w-full sticky top-0 z-[20] mx-auto flex border-b items-center lg:py-5 ">
         <NavBar />
       </header>
 
