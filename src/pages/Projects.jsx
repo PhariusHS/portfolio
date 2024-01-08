@@ -1,6 +1,6 @@
 import React from "react";
 import ProjectContainer from "../components/ProjectContainer";
-import JuegoDelGato from "../assets/pictures/JuegoDelGato.png";
+import JuegoDelGatoIMG from "../assets/pictures/JuegoDelGato.png";
 import TRESOL from "../assets/pictures/TRESOL.PNG";
 import { useLanguage } from "../contexts/LanguageContext";
 
@@ -24,7 +24,7 @@ function Projects() {
         <div className="flex md:flex-row flex-col ">
           <ProjectContainer
             title={ language === "english" ?"'El juego del gato'" :"El juego del gato"}
-            image={JuegoDelGato}
+            image={JuegoDelGatoIMG}
             type={["HTML", "CSS", "JS", "UX", "UI"]}
             parrafo1={
               language === "english"
