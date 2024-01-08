@@ -1,4 +1,7 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/all";
+
 import {
   HTML,
   CSS,
@@ -12,54 +15,85 @@ import {
   REACT,
   Tailwind,
 } from "./SVG/SVGS";
-
+gsap.registerPlugin(ScrollTrigger);
 function TechContainer() {
+
+  const containerRef = useRef();
+
+  useEffect(() => {
+    const container = containerRef.current;
+    const images = container.querySelectorAll(".px-2");
+
+    gsap.set(images, { y: 100, opacity: 0 });
+
+    gsap.fromTo(
+      images,
+      { y: 100, opacity: 0 },
+      {
+        y: 0,
+        opacity: 1,
+        stagger: 0.2,
+        duration: 0.5,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: container,
+        },
+      }
+    );
+  }, []);
+
+
   return (
     <>
-      <article className="flex flex-col items-center justify-center mx-auto overflow-x-hidden ">
-        <div className="flex flex-row items-center justify-center mx-auto overflow-x-hidden ">
-          <div>
-            <HTML width={150} height={150} />
+      <article className="flex flex-wrap items-center justify-center mx-auto overflow-x-hidden overflow-y-hidden  ">
+        <div ref={containerRef}    className="flex flex-wrap justify-around  dark:text-white">
+          <div className="px-2 py-4 md:px-3 ">
+            <HTML width={120} height={120} />
             <h1 className="text-center">HTML</h1>
           </div>
-          <div>
-            <CSS width={150} height={150} />
+
+          <div className="px-2 py-4 md:px-3">
+            <CSS width={120} height={120} />
             <h1 className="text-center">CSS</h1>
           </div>
-          <div>
-            <JavaScript width={150} height={150} />
+          <div className="px-2 py-4 md:px-3 ">
+            <JavaScript width={120} height={120} />
             <h1 className="text-center">JavaScrpit</h1>
           </div>
-          <div>
-            <REACT width={150} height={150} />
+
+          <div className="px-2 py-4 md:px-3 ">
+            <REACT width={120} height={120} />
             <h1 className="text-center">React</h1>
           </div>
-          <div>
-            <Git width={150} height={150} />
+
+          <div className="px-2 py-4 md:px-3 ">
+            <Git width={120} height={120} />
             <h1 className="text-center">Git</h1>
           </div>
-          <div>
-            <GitHub width={150} height={150} />
+          <div className="px-2 py-4 md:px-3 ">
+            <GitHub width={120} height={120} />
             <h1 className="text-center">GitHub</h1>
           </div>
-          <div>
-            <NodeJS width={150} height={150} />
+
+          <div className="px-2 py-2 md:px-3 ">
+            <NodeJS width={100} height={130} />
             <h1 className="text-center">Node.js</h1>
           </div>
-          <div>
-            <MongoDB width={150} height={150} />
+          <div className="px-2 py-4 md:px-3 ">
+            <MongoDB width={120} height={120} />
             <h1 className="text-center">MongoDB</h1>
           </div>
-          <div>
-            <MYSQL width={150} height={150} />
+          <div className="px-2 py-4 md:px-3 ">
+            <MYSQL width={120} height={120} />
             <h1 className="text-center">MySQL</h1>
           </div>
-          <div>
-            <Tailwind width={150} height={150} />
+
+          <div className="px-2 py-4 md:px-3 ">
+            <Tailwind width={120} height={120} />
             <h1 className="text-center">Tailwind CSS</h1>
           </div>
-          <div>
-            <Figma width={150} height={150} />
+          <div className="px-2 py-4 md:px-3 ">
+            <Figma width={120} height={120} />
             <h1 className="text-center">Figma</h1>
           </div>
         </div>
