@@ -79,8 +79,8 @@ function About() {
               {" "}
               {/* About me 1 */}
               {language === "english"
-                ? "Hello! I am Luca Ponteprimo, a full-stack web developer and programming technician. I am a young enthusiast for challenges, teamwork, and the exciting process of project development."
-                : " ¡Hola! Soy Luca Ponteprimo, un desarrollador web full-stack, técnico en programación y un joven entusiasta de los desafíos, el trabajo en equipo y el emocionante proceso de desarrollo de proyectos."}
+                ? "Hello! I am Luca Ponteprimo, a junior full-stack web developer and programming technician. I am a young enthusiast for challenges, teamwork, and the exciting process of project development."
+                : " ¡Hola! Soy Luca Ponteprimo, un desarrollador web full-stack junior, técnico en programación y un joven entusiasta de los desafíos, el trabajo en equipo y el emocionante proceso de desarrollo de proyectos."}
             </p>
 
             <p className="md:text-left text-center font-bold text-sm md:max-w-lg max-w-xl md:pr-12 pt-5 dark:text-seagull-50">
