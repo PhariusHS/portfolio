@@ -4,6 +4,7 @@ import { useGSAP } from "@gsap/react";
 import picture from "../assets/pictures/Picture.jfif";
 import vector1 from "../assets/pictures/Vector1.png";
 import Resume_Ponteprimo_Luca from "../assets/pictures/Resume_Ponteprimo_Luca.pdf"
+import CV_Ponteprimo_Luca from "../assets/pictures/CV_Ponteprimo_Luca.pdf"
 import { LinkedIn, CV } from "../components/SVG/SVGS";
 import { useLanguage } from "../contexts/LanguageContext";
 
@@ -96,9 +97,9 @@ function About() {
             {/* Resume and LinkedIn buttons */}
 
             <a
-              href={language === "english" ? Resume_Ponteprimo_Luca : CV}
+              href={language === "english" ? Resume_Ponteprimo_Luca : CV_Ponteprimo_Luca}
               target="_blank"
-              download={language === "english" ? "Resume_Ponteprimo_Luca.pdf" : "CV"}
+              download={language === "english" ? "Resume_Ponteprimo_Luca.pdf" : "CV_Ponteprimo_Luca.pdf"}
               className={
                 language === "english"
                   ? "border-seagull-900 hover:bg-seagull-800 border-2 py-1 px-3 rounded-xl mr-1 ml-5 flex items-center hover:cursor-pointer"
