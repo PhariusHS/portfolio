@@ -4,9 +4,22 @@ export default {
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
+  darkMode:"class",
   theme: {
+
+      screens:{
+        'md':'900px'
+      },
+
+
+
     colors:{
       'transparent': 'transparent',
+
+      'smoothDark':'#121212',
+
+      'white':"#fff",
+      "gray":"#292a2b",
       
       'seagull': {
         '50': '#f3f8fc',
@@ -66,7 +79,15 @@ export default {
   
     },
     extend: {
+
+
       
+      dropShadow: {
+        glow: [
+          "0 0px 20px rgba(255,255, 255, 0.35)",
+          "0 0px 65px rgba(255, 255,255, 0.2)"
+        ]
+      }
     },
   },
   plugins: [],
