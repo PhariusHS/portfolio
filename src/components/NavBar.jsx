@@ -31,7 +31,7 @@ function NavBar() {
 
 
   const content = <> {/*Menu  */}
-       <div ref={contentRef} className="md:hidden block absolute top-14 w-full left-0 right-0 bg-seagull-400 transition rounded-b-3xl" style={{ opacity: 0, pointerEvents: isOpen ? "auto" : "none" }}>
+       <div ref={contentRef} className="md:hidden block absolute top-24 w-full left-0 right-0 bg-seagull-400 transition rounded-b-3xl" style={{ opacity: 0, pointerEvents: isOpen ? "auto" : "none" }}>
         <ul   className="text-center px-20 pt-4 pb-32 ">
           <Link spy={true} smooth={true} onClick={handleClick} to="about">
             <li className="my-4 py-4 border-b border-pizazz-800 hover:bg-seagull-900 hover:rounded-lg ">
@@ -73,7 +73,7 @@ function NavBar() {
         </div>
         <div className="lg:flex md:flex lg: flex-1 items-center justify-end font-normal hidden">
           <div className="flex-10">
-            <ul className="flex gap-8 mx-5 text-[14px]">
+            <ul className="flex gap-8 mx-5 text-[20px] font-bold">
               <Link spy={true} smooth={true} to="about">
                 <li className=" flex justify-center items-center px-1 mx-4   hover:cursor-pointer hover:border-b-pizazz-900 border-transparent border-b-2   transition duration-300  hover:border-pizazz-600 hover:text-pizazz-600">
                     {language === "english" ? "About me" : "Sobre mi"}
