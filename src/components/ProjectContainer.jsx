@@ -58,7 +58,7 @@ function ProjectContainer(props) {
           />
         </a>
 
-        <a href={props.link} target="_blank">
+        <a href={props.link2} target="_blank">
           <GitHub
             width={50}
             height={50}

@@ -52,8 +52,8 @@ function Projects() {
             }
             parrafo2={
               language === "english"
-                ? "Despite the project's cancellation, the experience was invaluable for my professional development. I learned and understood what the developer process is like, facing challenges and acquiring skills that have been fundamental to my growth as a developer."
-                : "A pesar de la cancelación del proyecto, la experiencia fue invaluable para mi desarrollo profesional. Aprendí y entendi como es el proceso de un desarrollador, enfrentándome a desafíos y adquiriendo habilidades que han sido fundamentales para mi crecimiento como desarrollador."
+                ? "Despite the project's cancellation, the experience was invaluable for my professional development. I learned and understood the creating process of a REST API and the day to day from a developer, facing challenges and acquiring skills that have been fundamental to my growth as a developer."
+                : "A pesar de la cancelación del proyecto, la experiencia fue invaluable para mi desarrollo profesional. Aprendí y entendi como es el proceso de crear una API REST y el dia a dia de un desarrolador, enfrentándome a desafíos y adquiriendo habilidades que han sido fundamentales para mi crecimiento como desarrollador."
             }
             fecha="08/2023 - 12/2023"
             link="https://github.com/PhariusHS/sistemaGestion"
