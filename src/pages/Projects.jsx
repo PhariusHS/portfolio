@@ -1,7 +1,7 @@
 import React from "react";
 import ProjectContainer from "../components/ProjectContainer";
 import JuegoDelGatoIMG from "../assets/pictures/JuegoDelGato.png";
-import TRESOL from "../assets/pictures/TRESOL.PNG";
+import CoinTracker from "../assets/pictures/CoinTracker.jpg";
 import { useLanguage } from "../contexts/LanguageContext";
 
 function Projects() {
@@ -10,7 +10,6 @@ function Projects() {
   return (
     <section
       id="projects"
-      className="h-screen mb-96 mx-auto md:mb-24 w-[90%] justify-center items-center"
     >
       <div className="flex flex-col justify-center items-center ">
         <h1
@@ -21,7 +20,6 @@ function Projects() {
           {language === "english" ? "My projects" : "Mis proyectos"}
         </h1>
 
-        <div className="flex md:flex-row flex-col ">
           <ProjectContainer
             title={ language === "english" ?"'El juego del gato'" :"El juego del gato"}
             image={JuegoDelGatoIMG}
@@ -43,7 +41,7 @@ function Projects() {
 
           <ProjectContainer
             title={ language === "english" ?"Managment system" :"Gestor de producción"}
-            image={TRESOL}
+            image={CoinTracker}
             type={["REACT", "NODEJS", "JS", "MONGODB", "EXPRESS", "UI"]}
             parrafo1={
               language === "english"
@@ -59,7 +57,6 @@ function Projects() {
             link="https://github.com/PhariusHS/sistemaGestion"
             style="hidden"
           />
-        </div>
       </div>
     </section>
   );

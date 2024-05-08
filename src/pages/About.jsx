@@ -1,10 +1,10 @@
 import { useRef, useEffect } from "react";
 import gsap from "gsap"; // <-- import GSAP
 import { useGSAP } from "@gsap/react";
-import picture from "../assets/pictures/Picture.jfif";
+import Personal_Foto from "../assets/pictures/Personal_Foto.jpg";
 import vector1 from "../assets/pictures/Vector1.png";
-import Resume_Ponteprimo_Luca from "../assets/pictures/Resume_Ponteprimo_Luca.pdf"
-import CV_Ponteprimo_Luca from "../assets/pictures/CV_Ponteprimo_Luca.pdf"
+import LucaPonteprimoResume from "../assets/pictures/LucaPonteprimoResume.pdf"
+import CV_Ponteprimo_ESP from "../assets/pictures/CV_Ponteprimo_ESP.pdf"
 import { LinkedIn, CV } from "../components/SVG/SVGS";
 import { useLanguage } from "../contexts/LanguageContext";
 
@@ -97,9 +97,9 @@ function About() {
             {/* Resume and LinkedIn buttons */}
 
             <a
-              href={language === "english" ? Resume_Ponteprimo_Luca : CV_Ponteprimo_Luca}
+              href={language === "english" ? LucaPonteprimoResume : CV_Ponteprimo_ESP}
               target="_blank"
-              download={language === "english" ? "Resume_Ponteprimo_Luca.pdf" : "CV_Ponteprimo_Luca.pdf"}
+              download={language === "english" ? "LucaPonteprimoResume.pdf" : "CV_Ponteprimo_ESP.pdf"}
               className={
                 language === "english"
                   ? "border-seagull-900 hover:bg-seagull-800 border-2 py-1 px-3 rounded-xl mr-1 ml-5 flex items-center hover:cursor-pointer"
@@ -128,11 +128,11 @@ function About() {
 
         <article className="flex justify-start items-start order-1 md:order-2 md:mt-6">
           {" "}
-          {/* Picture of me */}
+          {/* Personal_Foto of me */}
           <img
             className="  rounded-full  max-w-xs max-h-60 align-middle border-none  about"
-            src={picture}
-            alt="My Picture"
+            src={Personal_Foto}
+            alt="My Personal_Foto"
             width={250}
             height={250}
           />

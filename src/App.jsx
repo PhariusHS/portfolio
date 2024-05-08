@@ -27,9 +27,10 @@ function App() {
         <main className="w-full pb-[60rem] md:pb-[30rem] dark:bg-smoothDark">
           <About />
 
+          <Projects />
+
           <TechStack />
 
-          <Projects />
         </main>
 
         <Footer />

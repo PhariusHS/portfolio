@@ -1,79 +1,71 @@
 import React from "react";
 import { GitHub, Link } from "./SVG/SVGS";
+import LinkButton from "./LinkButton";
 
-function ProjectContainer(props) {
+function ProjectContainer({
+  image,
+  title,
+  parrafo1,
+  parrafo2,
+  type,
+  link,
+  link2,
+}) {
   return (
-    <article className="md:mx-10 mb-8 w-auto h-auto bg-opacity-70 border-2 border-hopbush-300 rounded-3xl shadow-2xl flex flex-col items-center overflow-hidden">
-      <div className="bg-medium-purple-700 dark:bg-medium-purple-900 w-full h-96 flex flex-col items-center pb-8 ">
-        <header className="py-5">
-          <h1 className="text-center font-bold uppercase text-3xl text-hopbush-200 ">
-            {props.title}
-          </h1>
-        </header>
-
-        <div className="mx-auto px-2  py-2 bg-hopbush-600 object-cover rounded-sm">
-          <img
-            src={props.image}
-            className="w-full max-w-sm h-60 md:h-56"
-            alt="Imagen ilustrativa"
-          />
+    <div className="flex flex-col gap-y-16">
+      <article className="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0 mb-20">
+        <div className="w-full md:w-1/2">
+          <div className="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
+            <img
+              alt="Casillero juego del gato"
+              className="object-cover object-top w-full h-60 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105"
+              loading="lazy"
+              src={image}
+            />
+          </div>
         </div>
-      </div>
 
-      <div className="flex flex-wrap items-center justify-center mt-3">
-        {props.type.map((tipo, index) => (
-          <h2
-            key={index}
-            className="mt-3 mx-2 md:mx-1 px-3 rounded-xl border-hopbush-400 border-solid border-2 p-1 text-xs md:text-sm dark:text-white"
-          >
-            {tipo}
-          </h2>
-        ))}
-      </div>
+        <div className="w-full md:w-1/2 md:max-w-lg">
+          <h3 className="text-2xl font-bold text-gray-800 dark:text-gray-100">
+            {title}
+          </h3>
 
-      <div className="w-full py-3">
-        <div className="flex-grow border-b-2 border-hopbush-300 drop-shadow-glow"></div>
-      </div>
+          <div className="flex flex-wrap mt-2">
+            <ul className="flex flex-row mb-2 gap-x-2">
+              {type.map((tipo, index) => (
+                <li key={index}>
+                  <span
+                    className={`flex gap-x-2 rounded-full text-xs py-1 px-2 border-2`}
+                  >
+                    {tipo}
+                  </span>
+                </li>
+              ))}
+            </ul>
 
-      <div className="mx-5 mt-3 pb-10  dark:text-white">
-        <p className="text-sm md:text-base max-w-md my-2">{props.parrafo1}</p>
-        <p className="text-sm md:text-base max-w-md my-2">{props.parrafo2}</p>
-      </div>
-
-      <time className="mb-3 dark:text-white">{props.fecha}</time>
-
-      <div className="w-full justify-center items-center overflow-hidden flex flex-row">
-        <a href={props.link} target="_blank" className={props.style}>
-          <Link
-            width={50}
-            height={50}
-            className="mx-3 mb-2 dark:hidden hover:bg-gray rounded-3xl hover:h-10"
-          />
-          <Link
-            width={50}
-            height={50}
-            fill="#121212"
-            stroke="#fff"
-            className="mx-3 mb-2 hover:bg-gray rounded-3xl hover:h-10 hidden dark:inline"
-          />
-        </a>
-
-        <a href={props.link2} target="_blank">
-          <GitHub
-            width={50}
-            height={50}
-            className="mx-3 mb-2 dark:hidden hover:bg-gray rounded-3xl hover:h-10"
-          />
-          <GitHub
-            width={50}
-            height={50}
-            fill="#fff"
-            stroke="#121212"
-            className="mx-3 mb-2 hover:bg-gray rounded-3xl hover:h-10 hidden dark:inline"
-          />
-        </a>
-      </div>
-    </article>
+            <div className="mt-2 text-gray-700 dark:text-gray-400">
+              {parrafo1}
+            </div>
+            <div className="mt-2 text-gray-700 dark:text-gray-400">
+              {parrafo2}
+            </div>
+            <footer className="flex items-end justify-start mt-4 gap-x-4">
+              {link && (
+                <LinkButton href={link} children={"code"}>
+                  <GitHub className="h-10 w-20" />
+                  
+                </LinkButton>
+              )}
+              {link2 && (
+                <LinkButton href={link2}>
+                  <Link className="h-10 w-20" />
+                </LinkButton>
+              )}
+            </footer>
+          </div>
+        </div>
+      </article>
+    </div>
   );
 }
 
