@@ -9,7 +9,7 @@ function Projects() {
 
   return (
     <section id="projects">
-      <div className="flex flex-col justify-center items-center mt-[30rem] md:mt-[10rem] ">
+      <div className="flex flex-col justify-center items-center mt-[20rem] md:mt-[10rem] ">
         <h1
           className="flex flex-col items-center justify-center font-extrabold bg-clip-text
         md:text-4xl text-2xl text-transparent text-center
