@@ -15,16 +15,11 @@ function App() {
     <LanguageProvider>
     
       <>
-        <header className="bg-seagull-500  w-full sticky top-0 z-[20] mx-auto flex border-b items-center lg:py-4 ">
+        <header className=" dark:bg-smoothDark dark:text-white w-full sticky top-0 z-[20] mx-auto flex border-b items-center lg:py-4 font-Montserrat">
           <NavBar />
         </header>
 
-        <aside className="flex flex-row justify-between dark:bg-smoothDark">
-        <LanguageButton />
-        <ThemeButton />
-        </aside>
-
-        <main className="w-full pb-[60rem] md:pb-[30rem] dark:bg-smoothDark">
+        <main className="w-full pb-[10rem]  dark:bg-smoothDark">
           <About />
 
           <Projects />

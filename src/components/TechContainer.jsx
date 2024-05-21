@@ -47,26 +47,26 @@ function TechContainer() {
     <>
       <article className="flex flex-wrap items-center justify-center mx-auto overflow-x-hidden overflow-y-hidden  ">
         <div ref={containerRef}    className="flex flex-wrap justify-around  dark:text-white">
-          <div className="px-2 py-4 md:px-3 ">
+          <div className="px-2 py-4 md:px-3 mx-7 ">
             <HTML width={120} height={120} />
             <h1 className="text-center">HTML</h1>
           </div>
 
-          <div className="px-2 py-4 md:px-3">
+          <div className="px-2 py-4 md:px-3 mx-7">
             <CSS width={120} height={120} />
             <h1 className="text-center">CSS</h1>
           </div>
-          <div className="px-2 py-4 md:px-3 ">
+          <div className="px-2 py-4 md:px-3 mx-7 ">
             <JavaScript width={120} height={120} />
             <h1 className="text-center">JavaScrpit</h1>
           </div>
 
-          <div className="px-2 py-4 md:px-3 ">
+          <div className="px-2 py-4 md:px-3 mx-7 ">
             <REACT width={120} height={120} />
             <h1 className="text-center">React</h1>
           </div>
 
-          <div className="px-2 py-4 md:px-3 ">
+          <div className="px-2 py-4 md:px-3 mx-7 ">
             <Git width={120} height={120} />
             <h1 className="text-center">Git</h1>
           </div>
@@ -92,11 +92,7 @@ function TechContainer() {
             <Tailwind width={120} height={120} />
             <h1 className="text-center">Tailwind CSS</h1>
           </div>
-          <div className="px-2 py-4 md:px-3 ">
-            <Figma width={120} height={120} />
-            <h1 className="text-center">Figma</h1>
           </div>
-        </div>
 
         <div className=" flex py-10 items-center w-full">
           <div className="flex-grow border-t-2 border-gray-400"></div>

@@ -26,7 +26,7 @@ function ProjectContainer({
         </div>
 
         <div className="w-full md:w-1/2 md:max-w-lg">
-          <h3 className="text-2xl font-bold text-gray-800 dark:text-gray-100">
+          <h3 className="text-2xl font-bold text-gray dark:text-gray-100">
             {title}
           </h3>
 
@@ -35,7 +35,7 @@ function ProjectContainer({
               {type.map((tipo, index) => (
                 <li key={index}>
                   <span
-                    className={`flex gap-x-2 rounded-full text-xs py-1 px-2 border-2`}
+                    className={`flex gap-x-2 rounded-full text-xs py-1 px-2 border-2 dark:text-gray-400`}
                   >
                     {tipo}
                   </span>
@@ -43,22 +43,22 @@ function ProjectContainer({
               ))}
             </ul>
 
-            <div className="mt-2 text-gray-700 dark:text-gray-400">
+            <div className="mt-2 text-gray-700 dark:text-gray-200">
               {parrafo1}
             </div>
-            <div className="mt-2 text-gray-700 dark:text-gray-400">
+            <div className="mt-2 text-gray-700 dark:text-gray-200">
               {parrafo2}
             </div>
-            <footer className="flex items-end justify-start mt-4 gap-x-4">
+            <footer className="flex  w-full items-center justify-center md:items-end md:justify-start mt-4 gap-x-4">
               {link && (
                 <LinkButton href={link} children={"code"}>
-                  <GitHub className="h-10 w-20" />
+                  <GitHub className="h-10 w-20" fill="#fff" />
                   
                 </LinkButton>
               )}
               {link2 && (
                 <LinkButton href={link2}>
-                  <Link className="h-10 w-20" />
+                  <Link className="h-10 w-20" stroke="#fff"/>
                 </LinkButton>
               )}
             </footer>

@@ -37,9 +37,9 @@ function About() {
   return (
     <section
       id="about"
-      className="  h-screen pt-12 pb-20 relative md:pt-10 md:pb-28  flex flex-col col-auto"
+      className="  h-screen pt-20 pb-20 relative md:pt-16 md:pb-28 mb-40 md:mb-60 flex flex-col col-auto"
     >
-      <article className=" md:mx-auto max-w-3xl px-5 relative  z-[1] flex flex-col ">
+      <article className=" md:mx-auto max-w-3xl px-5 relative mb-20 z-[1] flex flex-col ">
         <h1
           className="font-extrabold max-w-3xl bg-clip-text
       md:text-7xl text-4xl text-transparent font-heading  text-center
@@ -65,8 +65,8 @@ function About() {
             <h2
               className={
                 language === "english"
-                  ? " font-extrabold  max-w-full bg-clip-text sm:text-4xl text-2xl text-transparent  my-1  w-max bg-gradient-to-l from-seagull-600 to bg-pizazz-700 about"
-                  : "font-extrabold  max-w-full bg-clip-text sm:text-4xl text-2xl text-transparent  mt-8  w-max bg-gradient-to-l from-seagull-600 to bg-pizazz-700 about"
+                  ? " font-extrabold  max-w-full bg-clip-text sm:text-4xl text-2xl  my-1 text-black dark:text-white   w-max about"
+                  : "font-extrabold  max-w-full bg-clip-text sm:text-4xl text-2xl mt-8  text-black dark:text-white  w-max  about"
               }
             >
               {" "}

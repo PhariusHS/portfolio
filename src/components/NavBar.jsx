@@ -1,16 +1,16 @@
-import React from "react";
-import { useState, useRef, useEffect } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import gsap from "gsap"; // <-- import GSAP
 import { Link } from "react-scroll";
 import { FaTimes } from "react-icons/fa";
 import { MdMenu } from "react-icons/md";
 import { FiArrowUpRight } from "react-icons/fi";
 import { useLanguage } from "../contexts/LanguageContext";
+import LanguageButton from "./LanguageButton";
+import ThemeButton from "./ThemeButton";
 
-//Guardar LI->
-//<li className=" flex justify-center items-center px-1 mx-4 hover:bg-seagull-700 hover:cursor-pointer transition border-b-2 border-slate-800 hover:rounded-lg  hover:border-seagull-400 hover:text-seagull-400">
 function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [hasScrolled, setHasScrolled] = useState(false);
   const contentRef = useRef(null);
   const { language } = useLanguage(); //getting language from context
 
@@ -38,19 +38,34 @@ function NavBar() {
     }
   }, [isOpen]);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setHasScrolled(true);
+      } else {
+        setHasScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   const content = (
     <>
       {" "}
       {/*Menu  */}
       <div
         ref={contentRef}
-        className="md:hidden block absolute top-24 w-full left-0 right-0 bg-seagull-400 transition rounded-b-3xl"
+        className="md:hidden block absolute bg-seagull-600  dark:bg-seagull-900 top-20 w-full left-0 right-0 transition rounded-b-3xl"
         style={{ opacity: 0, pointerEvents: isOpen ? "auto" : "none" }}
       >
         <ul className="text-center px-20 pt-4 pb-32 ">
           <Link spy={true} smooth={true} onClick={handleClick} to="about">
-            <li className="my-4 py-4 border-b border-pizazz-800 hover:bg-seagull-900 hover:rounded-lg ">
-              {language === "english" ? "About me" : "Sobre mi"}
+            <li className="my-4 py-4 border-b text-black dark:text-white hover:rounded-lg ">
+              {language === "english" ? "About me" : "Sobre mí"}
             </li>
           </Link>
           <Link spy={true} smooth={true} onClick={handleClick} to="projects">
@@ -99,16 +114,17 @@ function NavBar() {
   );
 
   return (
-    <nav className="w-full">
+    <nav className={`w-full fixed top-0 z-50 transition ${hasScrolled ? 'backdrop-blur-bg-blur bg-blur-bg dark:bg-blur-bg-dark' : ''}`}>
       {" "}
       {/* navBar*/}
       <div className="h-10vh w-full flex justify-center z-50 text lg:py-2 pl-5">
+        <div><LanguageButton/></div>
         <div className="lg:flex md:flex lg: flex-1 items-center justify-center py-3 font-normal hidden">
           <div className="flex-10">
             <ul className="flex gap-8 mx-5 text-[20px] font-bold">
               <Link spy={true} smooth={true} to="about">
                 <li className=" flex justify-center items-center px-1 mx-4   hover:cursor-pointer hover:border-b-pizazz-900 border-transparent border-b-2   transition duration-300  hover:border-pizazz-600 hover:text-pizazz-600">
-                  {language === "english" ? "About me" : "Sobre mi"}
+                  {language === "english" ? "About me" : "Sobre mí"}
                 </li>
               </Link>
               <Link spy={true} smooth={true} to="projects">
@@ -123,9 +139,13 @@ function NavBar() {
               </Link>
             </ul>
           </div>
-        </div>
-        <div>{isOpen && content}</div>
 
+        </div>
+        <div className="flex justify-end"><ThemeButton/></div>
+
+
+        <div>{isOpen && content}</div>
+ 
         <button
           className="block md:hidden transition px-2 "
           onClick={handleClick}

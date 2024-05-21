@@ -30,8 +30,8 @@ function ThemeButton({}) {
 
   return (
     <>
-      <form className="flex flex-row items-center mx-5">
-        <button  className="mr-10 flex border-2 rounded-xl overflow-hidden px-0.5 dark:border-medium-purple-500">
+      <div className="flex flex-row items-center mx-5">
+        <button  className="mr-10 flex border-2 rounded-xl  overflow-hidden dark:border-medium-purple-500">
           {theme === "dark" && (
             <>
               
@@ -51,7 +51,7 @@ function ThemeButton({}) {
                 height={25}
                 fill="#a9a9a9"
                 stroke="#a9a9a9"
-                className="hover:bg-gray "
+                className="hover:bg-[#d3d3d3]"
               />
             </>
           )}
@@ -65,7 +65,7 @@ function ThemeButton({}) {
                 width={25}
                 height={25}
                 fill="#a9a9a9"
-                className="hover:bg-[#d3d3d3] border-r-2 "
+                className="hover:bg-[#d3d3d3]  border-r-2 "
               />
 
               <LightMode
@@ -74,12 +74,12 @@ function ThemeButton({}) {
                 height={25}
                 fill="#000"
                 stroke="#000"
-                className="hover:cursor-auto"
+                className="hover:cursor-auto dark:hover:bg-white"
               />
             </>
           )}
         </button>
-      </form>
+      </div>
     </>
   );
 }
