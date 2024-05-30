@@ -35,8 +35,8 @@ function Projects() {
               : "Desempeñé principalmente la tarea de implementar el funcionamiento lógico del juego, incluyendo la detección de los números seleccionados, el coloreado de cada casilla segun la multiplicación de los numeros seleccionados, el sistema de turnos y la detección del fin del juego."
             }
           fecha="05/2023 - 08/2023"
-          link="https://phariushs.github.io/FullStack/Frontend/primerpag.html"
-          link2="https://github.com/PhariusHS/FullStack"
+          link="https://github.com/PhariusHS/FullStack"
+          link2="https://phariushs.github.io/FullStack/Frontend/primerpag.html"
         />
 
         <ProjectContainer
