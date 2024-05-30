@@ -54,7 +54,7 @@ function Projects() {
               : "Desarrollo de una API REST básica, además de un sistema de autenticación con JWT, un sistema de rutas protegidas y filtrado de gastos por mes."
           }
           fecha="08/2023 - 12/2023"
-          link="https://github.com/PhariusHS/sistemaGestion"
+          link="https://github.com/PhariusHS/financialApp"
           style="hidden"
         />
       </div>
