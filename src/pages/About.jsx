@@ -76,7 +76,7 @@ function About() {
           </div>
 
           <div className="flex flex-col mx-auto md:items-left items-right aboutLate mt-6">
-            <p className="md:text-left text-center font-bold text-sm md:max-w-lg max-w-xl md:pr-16 dark:text-seagull-50">
+            <p className="md:text-left text-center font-bold text-sm md:max-w-lg max-w-xl md:pr-16 dark:text-gray-200">
               {" "}
               {/* About me 1 */}
               {language === "english"
@@ -84,7 +84,7 @@ function About() {
                 : " ¡Hola! Soy Luca Ponteprimo, un desarrollador web backend junior, técnico en programación y un joven entusiasta de los desafíos, el trabajo en equipo y el emocionante proceso de desarrollo de proyectos."}
             </p>
 
-            <p className="md:text-left text-center font-bold text-sm md:max-w-lg max-w-xl md:pr-12 pt-5 dark:text-seagull-50">
+            <p className="md:text-left text-center font-bold text-sm md:max-w-lg max-w-xl md:pr-12 pt-5 dark:text-gray-200">
               {" "}
               {/*About me 2 */}
               {language === "english"
@@ -93,7 +93,7 @@ function About() {
             </p>
           </div>
 
-          <div className="flex flex-row md:pr-72 py-5 about dark:text-seagull-50 z-10">
+          <div className="flex flex-row md:pr-72 py-5 about dark:text-gray-200 z-10">
             {/* Resume and LinkedIn buttons */}
 
             <a

@@ -12,8 +12,8 @@ function Projects() {
       <div className="flex flex-col justify-center items-center mt-[20rem] md:mt-[10rem] ">
         <h1
           className="flex flex-col items-center justify-center font-extrabold bg-clip-text
-        md:text-4xl text-2xl text-transparent text-center
-        w-max bg-gradient-to-l from-hopbush-500 to bg-medium-purple-700 my-10 pb-5 "
+        md:text-6xl text-4xl text-transparent text-center
+        w-max bg-gradient-to-l from-hopbush-500 to bg-medium-purple-700 my-20 pb-5 "
         >
           {language === "english" ? "My projects" : "Mis proyectos"}
         </h1>
