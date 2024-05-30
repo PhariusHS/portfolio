@@ -26,12 +26,12 @@ function Projects() {
           type={["HTML", "CSS", "JS", "UX", "UI"]}
           parrafo1={
             language === "english"
-              ? "I performed a fundamental role as the lead developer in the project 'El Juego del Gato' for Cordoba's Education ministry, focusing on promoting mathematical skills in children through a playful approach."
+              ? 'This was my first project based on third-party requests. We were asked to create a virtual representation of an already invented game, "El juego del gato" (The Cat´s Game)".'
               : 'Este fue mi primer proyecto basado en las solicitudes de un tercero, se nos pidió realizar una representación virtual de un juego ya inventado, "El juego del gato".'
           }
           parrafo2={
             language === "english"
-              ? "I have led my team on the design and development of the game board, incorporating key features such as validation and coloring of squares, as well as implementing validation logic to determine the winner. These features have been crucial in ensuring an intuitive and satisfying user experience."
+              ? "I primarily took on the task of implementing the game's logical functionality, including detecting the selected numbers, coloring each cell according to the multiplication of the selected numbers, the turn system, and detecting the end of the game."
               : "Desempeñé principalmente la tarea de implementar el funcionamiento lógico del juego, incluyendo la detección de los números seleccionados, el coloreado de cada casilla segun la multiplicación de los numeros seleccionados, el sistema de turnos y la detección del fin del juego."
             }
           fecha="05/2023 - 08/2023"
