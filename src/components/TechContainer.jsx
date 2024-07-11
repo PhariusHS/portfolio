@@ -14,6 +14,8 @@ import {
   NodeJS,
   REACT,
   Tailwind,
+  CSharp,
+  NetCore,
 } from "./SVG/SVGS";
 gsap.registerPlugin(ScrollTrigger);
 function TechContainer() {
@@ -83,14 +85,24 @@ function TechContainer() {
             <MongoDB width={120} height={120} />
             <h1 className="text-center">MongoDB</h1>
           </div>
-          <div className="px-2 py-4 md:px-3 ">
+          <div className="px-2 py-5 md:px-3 ">
             <MYSQL width={120} height={120} />
-            <h1 className="text-center">MySQL</h1>
+            <h1 className="text-center">SQL</h1>
           </div>
 
           <div className="px-2 py-4 md:px-3 ">
             <Tailwind width={120} height={120} />
             <h1 className="text-center">Tailwind CSS</h1>
+          </div>
+
+          <div className="px-2 py-4 md:px-3 ">
+            <CSharp width={120} height={120} />
+            <h1 className="text-center">C#</h1>
+          </div>
+
+          <div className="px-2 py-4 md:px-3 ">
+            <NetCore width={120} height={120} />
+            <h1 className="text-center">.Net</h1>
           </div>
           </div>
 
