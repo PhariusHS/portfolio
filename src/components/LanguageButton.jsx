@@ -19,8 +19,8 @@ function LanguageButton() {
           className="dark:border- my-5 mx-2  dark:text-white ml-6 dark:bg-smoothDark hover:cursor-auto"
           onChange={handleChangeLanguage}
         >
-          <option value="spanish">Es</option>
-          <option value="english">En</option>
+          <option value="spanish">En</option>
+          <option value="english">Es</option>
         </select>
       </form>
     </>

@@ -5,7 +5,6 @@ import { ScrollTrigger } from "gsap/all";
 import {
   HTML,
   CSS,
-  Figma,
   GitHub,
   Git,
   JavaScript,
@@ -14,12 +13,11 @@ import {
   NodeJS,
   REACT,
   Tailwind,
-  CSharp,
-  NetCore,
+  Java,
+  Spring,
 } from "./SVG/SVGS";
 gsap.registerPlugin(ScrollTrigger);
 function TechContainer() {
-
   const containerRef = useRef();
 
   useEffect(() => {
@@ -44,11 +42,13 @@ function TechContainer() {
     );
   }, []);
 
-
   return (
     <>
       <article className="flex flex-wrap items-center justify-center mx-auto overflow-x-hidden overflow-y-hidden  ">
-        <div ref={containerRef}    className="flex flex-wrap justify-around  dark:text-white">
+        <div
+          ref={containerRef}
+          className="flex flex-wrap justify-around  dark:text-white"
+        >
           <div className="px-2 py-4 md:px-3 mx-7 ">
             <HTML width={120} height={120} />
             <h1 className="text-center">HTML</h1>
@@ -96,15 +96,15 @@ function TechContainer() {
           </div>
 
           <div className="px-2 py-4 md:px-3 ">
-            <CSharp width={120} height={120} />
-            <h1 className="text-center">C#</h1>
+            <Java width={120} height={120} />
+            <h1 className="text-center">Java</h1>
           </div>
 
           <div className="px-2 py-4 md:px-3 ">
-            <NetCore width={120} height={120} />
-            <h1 className="text-center">.Net</h1>
+            <Spring width={120} height={120} />
+            <h1 className="text-center">Spring</h1>
           </div>
-          </div>
+        </div>
 
         <div className=" flex py-10 items-center w-full">
           <div className="flex-grow border-t-2 border-gray-400"></div>

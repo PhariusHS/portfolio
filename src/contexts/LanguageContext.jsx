@@ -15,7 +15,7 @@ export const useLanguage = () => {
 
 function LanguageProvider({children}) {
     
-    const [language, setLanguage] = useState("spanish")
+    const [language, setLanguage] = useState("english")
 
     const handleChangeLanguage = (e) => {
        
