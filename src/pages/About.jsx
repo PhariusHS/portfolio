@@ -93,10 +93,10 @@ function About() {
             </p>
           </div>
 
-          <div className="flex flex-row md:pr-72 py-5 about dark:text-gray-200 z-10">
+          <div className="flex flex-row md:pr-[25rem] py-5 about dark:text-gray-200 z-10 -mx-52">
             {/* Resume and LinkedIn buttons */}
 
-            <a
+            {/* <a
               href={language === "english" ? LucaPonteprimoResume : CV_Ponteprimo_ESP}
               target="_blank"
               download={language === "english" ? "LucaPonteprimoResume.pdf" : "CV_Ponteprimo_ESP.pdf"}
@@ -109,12 +109,12 @@ function About() {
               <CV width={25} height={25} className="mr-1 " fill="#fff" />
               <CV width={25} height={25} className="mr-1 dark:hidden absolute" fill="#000" />
               {language === "english" ? "Resume" : "CV"}
-            </a>
-
+            </a> */}
+            {/*TODO: Change resume files */}
             <a
               href="https://www.linkedin.com/in/luca-ponteprimo-013a9b274/"
               target="_blank"
-              className="border-seagull-900 hover:bg-seagull-800 border-2 py-1 px-3 rounded-xl mx-2 flex items-center hover:cursor-pointer"
+              className="border-seagull-900 hover:bg-seagull-800 border-2 py-1 px-3 rounded-xl flex items-center hover:cursor-pointer" //TODO:  mx-2 
             >
               <LinkedIn width={25} height={25} className="mr-1 " fill="#fff" />
               <LinkedIn width={25} height={25} className="mr-1 dark:hidden absolute" fill="#000" /> LinkedIn
