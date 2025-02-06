@@ -3,8 +3,8 @@ import gsap from "gsap"; // <-- import GSAP
 import { useGSAP } from "@gsap/react";
 import Personal_Foto from "../assets/pictures/Personal_Foto.jpg";
 import vector1 from "../assets/pictures/Vector1.png";
-import LucaPonteprimoResume from "../assets/pictures/LucaPonteprimoResume.pdf"
-import CV_Ponteprimo_ESP from "../assets/pictures/CV_Ponteprimo_ESP.pdf"
+import resume_luca_ponteprimo from "../assets/pictures/resume_luca_ponteprimo.pdf"
+import luca_ponteprimo_curriculum from "../assets/pictures/luca_ponteprimo_curriculum.pdf"
 import { LinkedIn, CV } from "../components/SVG/SVGS";
 import { useLanguage } from "../contexts/LanguageContext";
 
@@ -37,7 +37,7 @@ function About() {
   return (
     <section
       id="about"
-      className="  h-screen pt-20 pb-20 relative md:pt-16 md:pb-28 mb-40 md:mb-60 flex flex-col col-auto"
+      className="  h-screen pt-20 pb-20 relative md:pt-16 md:pb-28 mb-60 md:mb-10 flex flex-col col-auto"
     >
       <article className=" md:mx-auto max-w-3xl px-5 relative mb-20 z-[1] flex flex-col ">
         <h1
@@ -93,11 +93,12 @@ function About() {
             </p>
           </div>
 
-          <div className="flex flex-row md:pr-[25rem] py-5 about dark:text-gray-200 z-10 -mx-52">
+          <div className="flex flex-row md:pr-[18rem] py-5 about dark:text-gray-200 z-10 -mx-52">
             {/* Resume and LinkedIn buttons */}
 
-            {/* <a
-              href={language === "english" ? LucaPonteprimoResume : CV_Ponteprimo_ESP}
+            {/*Resume button */}
+            <a
+              href={language === "english" ? resume_luca_ponteprimo : luca_ponteprimo_curriculum}
               target="_blank"
               download={language === "english" ? "LucaPonteprimoResume.pdf" : "CV_Ponteprimo_ESP.pdf"}
               className={
@@ -109,15 +110,16 @@ function About() {
               <CV width={25} height={25} className="mr-1 " fill="#fff" />
               <CV width={25} height={25} className="mr-1 dark:hidden absolute" fill="#000" />
               {language === "english" ? "Resume" : "CV"}
-            </a> */}
-            {/*TODO: Change resume files */}
+            </a> 
+
+            {/*Linkedin button */}
             <a
               href="https://www.linkedin.com/in/luca-ponteprimo-013a9b274/"
               target="_blank"
-              className="border-seagull-900 hover:bg-seagull-800 border-2 py-1 px-3 rounded-xl flex items-center hover:cursor-pointer" //TODO:  mx-2 
+              className="border-seagull-900 hover:bg-seagull-800 border-2 py-1 px-3 rounded-xl flex items-center hover:cursor-pointer mx-2" 
             >
-              <LinkedIn width={25} height={25} className="mr-1 " fill="#fff" />
-              <LinkedIn width={25} height={25} className="mr-1 dark:hidden absolute" fill="#000" /> LinkedIn
+              <LinkedIn width={25} height={25} className=" " fill="#fff" />
+              <LinkedIn width={25} height={25} className=" dark:hidden absolute" fill="#000" /> LinkedIn
             </a>
           </div>
         </article>
