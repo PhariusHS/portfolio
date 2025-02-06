@@ -3,8 +3,8 @@ import gsap from "gsap"; // <-- import GSAP
 import { useGSAP } from "@gsap/react";
 import Personal_Foto from "../assets/pictures/Personal_Foto.jpg";
 import vector1 from "../assets/pictures/Vector1.png";
-import resume_luca_ponteprimo from "../assets/pictures/resume_luca_ponteprimo.pdf"
-import luca_ponteprimo_curriculum from "../assets/pictures/luca_ponteprimo_curriculum.pdf"
+import resumeLuca from "../assets/pictures/resumeLuca.pdf"
+import lucaCurriculum from "../assets/pictures/lucaCurriculum.pdf"
 import { LinkedIn, CV } from "../components/SVG/SVGS";
 import { useLanguage } from "../contexts/LanguageContext";
 
@@ -98,7 +98,7 @@ function About() {
 
             {/*Resume button */}
             <a
-              href={language === "english" ? resume_luca_ponteprimo : luca_ponteprimo_curriculum}
+              href={language === "english" ? resumeLuca : lucaCurriculum}
               target="_blank"
               download={language === "english" ? "LucaPonteprimoResume.pdf" : "CV_Ponteprimo_ESP.pdf"}
               className={
